@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/login1.css') }}">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheets/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheets/font-awesome.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheets/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheets/main.css') }}">
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="{{ url_for('static',filename='img/img-01.png') }}" alt="IMG">
+			</div>
+
+			<form action="http://127.0.0.1:5000/patient/contactus" method="post" class="contact1-form validate-form">
+				<span class="contact1-form-title">
+					Get in touch
+				</span>
+				<div class="wrap-input1 validate-input" data-validate = "Message is required">
+					<textarea class="input1" name="complains" placeholder="complain"></textarea>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Send 
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+                    </button>
+                    <div class="msg1">{{ mes }}</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="{{ url_for('static',filename='jss/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='jss/popper.js') }}"></script>
+	<script src="{{ url_for('static',filename='jss/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='jss/tilt.jquery.min.js') }}"></script>
+    
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<script src="{{ url_for('static',filename='jss/main.js') }}"></script>
+
+</body>
+</html>

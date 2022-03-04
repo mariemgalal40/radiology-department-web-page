@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/login1.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/font-awesome.min.css') }}">
+    <title>Sign in</title>
+
+</head>
+<body>
+  <div class="slide1-content">
+    <h3 class="title1"> welcome back</h3>
+  </div> 
+  <div class="main">
+    <p class="sign" align="center">Sign in</p>
+    <form action="http://127.0.0.1:5000/patient" method="POST" class="form1">
+      <input class="un " type="text" align="center" placeholder="name" name="name">
+      <input class="pass" type="password" align="center" placeholder="patient ssn" name="ssn">
+      <input type="submit" value="Submit" class="submit" ><br>     
+      <div class="msg1">{{ error }}</div>
+
+    </div>
+    <div class="slide2-content">
+    <a href="http://127.0.0.1:5000/patient/patientsignup"class="title2" >sign up</a>
+    </div>
+   
+  </body>
+</html>
+

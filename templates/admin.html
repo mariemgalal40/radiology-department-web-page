@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>  Doctors </h1>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Dep</th>
+      <th scope="col">Id</th>
+      <th scope="col">SSN</th>
+    </tr>
+  </thead>
+  <tbody>
+       {% for data in doctorsData %}
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>{{data.0}}</td>
+      <td>{{data.1}}</td>
+      <td>{{data.2}}</td>
+      <td>{{data.3}}</td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+<h1> Patients </h1>
+<table class="table table-striped">
+<thead>
+<tr>
+  <th scope="col">#</th>
+  <th scope="col">name</th>
+  <th scope="col">age</th>
+  <th scope="col">phone_number</th>
+  <th scope="col">ssn</th>
+</tr>
+</thead>
+<tbody>
+   {% for data in patientData %}
+<tr>
+  <th scope="row">{{loop.index}}</th>
+  <td>{{data.0}}</td>
+  <td>{{data.1}}</td>
+  <td>{{data.2}}</td>
+  <td>{{data.3}}</td>
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+<h1> Complains </h1>
+<table class="table table-striped">
+<thead>
+<tr>
+  <th scope="col">#</th>
+  <th scope="col">complains</th>
+</tr>
+</thead>
+<tbody>
+   {% for data in complainsData %}
+<tr>
+  <th scope="row">{{loop.index}}</th>
+  <td>{{data.0}}</td>
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+</div>
+
+</body>
+</html>
+
+</html>

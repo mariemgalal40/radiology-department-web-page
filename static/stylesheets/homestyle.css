@@ -1,0 +1,143 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    }
+    .container1{
+    width: 80%;
+    margin: auto;
+    }
+    .header{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+    }
+    .header .logo{
+        
+       width: 60%;
+        float: left;  
+      
+      }
+    .header .logo img{
+          padding-top: 5px;
+          border-radius: 10px;
+      }
+    .header .nav{
+        width: 40%;
+      float: left;
+      list-style: none;  
+    }
+    .clear{
+        clear: both;
+    }
+    .header .nav li{
+        display: inline-block;
+    }
+    .header .nav li a{
+        display: block;
+        text-decoration: none;
+        padding:2px ;
+        color:rgb(102, 101, 101);
+    }
+    .header .nav li a.active:after , .header .nav li a:after{
+        content: "";
+        display: block;
+        height: 3px; 
+        background-color: rgb(122, 168, 168);
+        transition: width 0.5s;
+    }
+    .header .nav li a.active:after,.header .nav li a:hover:after{
+        width: 20%;
+    } 
+    .header .nav li a:after{
+        width: 0%;
+    }
+    
+    .coverr1{
+        width: 100%;
+        height:450px ;
+        background-image: <img src= "{{ url_for('static',filename='img/logo.PNG') }}">;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        
+    
+    }
+    .carousel-item {
+        height: 100vh;
+        min-height: 350px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    
+      .slide1{
+        width: 100%;
+        height:450px ;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    
+    }
+    .slide1-content{
+        color:  rgb(79, 116, 116);
+        position: absolute;
+        left: 100px;
+        top: 120px;
+        font-family:'Redressed';
+        width:40%
+    }
+    
+    .title1{
+        font-size: 35px;
+        position: center;
+        padding-bottom: 10px;
+        font-family :'Yellowtail';
+    }
+    .title2{
+        font-size: 40px;
+        position: center;
+        
+    }
+    .des{
+        font-size: 15px;
+        padding-top: 10px;
+        position: center;
+    }
+    .service-header{
+    text-align: center;
+    padding-top: 100px;
+    
+    }
+    .service-header .service-title{
+     text-transform: capitalize;
+     font-size: 35px;
+     color: rgb(102, 101, 101);
+    }
+    
+    .service-header .line{
+         display: block;
+         height: 2px;
+         width: 200px;
+         margin: auto;
+         background-color: rgb(122, 168, 168) ;
+     }
+    
+     body, html {
+        height: 100%;
+        margin: 0;
+        font: 400 15px/1.8 "Lato", sans-serif;
+        color: #777;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+      }      
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 500px) {
+        .column {
+          width: 100%;
+        }
+
